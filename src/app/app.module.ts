@@ -7,6 +7,8 @@ import { ComponentComponent } from './component/component.component';
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { MapaComponent } from './component/mapa/mapa.component';
 import { GaleriaComponent } from './component/galeria/galeria.component';
+import { DatosComponent } from './component/datos/datos.component';
+import { InicioComponent } from './component/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { GaleriaComponent } from './component/galeria/galeria.component';
     ComponentComponent,
     NavbarComponent,
     MapaComponent,
-    GaleriaComponent
+    GaleriaComponent,
+    DatosComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
