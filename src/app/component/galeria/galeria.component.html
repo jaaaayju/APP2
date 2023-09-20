@@ -1,1 +1,362 @@
-<p>galeria works!</p>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (light)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="light" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="auto" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<main>
+  <div class="container py-4">
+    <header class="pb-3 mb-4 border-bottom">
+     
+    </header>
+
+    <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">La vida de los pingüinos</h1>
+        <p class="col-md-8 fs-4">Los pingüinos son aquellas aves que se engloban dentro de la familia Spheniscidae y a su vez dentro del orden de los Sphenisciformes.
+            Se trata de un grupo de aves marinas no voladoras, en el que se pueden diferenciar hasta 18 especies diferentes las cuales que se distribuyen -exceptuando el pingüino de las islas Galápagos- exclusivamente en el Hemisferio Sur. </p>
+        <button class="btn btn-dark btn-lg" type="button">Más información</button>
+      </div>
+    </div>
+
+    <div class="row align-items-md-stretch">
+      <div class="col-md-6">
+        <div class="h-100 p-5 text-bg-dark rounded-3">
+          <h2>Que comen los pingüinos</h2>
+          <p>El Pingüino Emperador se alimenta en toda la columna de agua donde consume peces, crustáceos eufásidos(krill) y cefalópodos (calamares). . El pingüino emperador es un importante predador tope.
+            Anteriormente se le conocían como pájaros bobos porque su forma de caminar es algo torpe y peculiar. Pero estas aves son inteligentes y aunque con sus aletas no pueden volar, si sirven para bucear. Son excelentes nadadores y esta capacidad es primordial para conseguir su alimento.
+
+La anatomía de los pingüinos lo prepara para cazar sus presas preferidas, los peces. .
+          </p>
+          <button class="btn btn-outline-light" type="button">Donar</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class= "card" style="width: 18 rem;">
+          <h2></h2>
+          <img src="../../../assets/imagenes/1200px-Meganyctiphanes_norvegica2.jpg">
+          <button class="btn btn-outline-secondary" type="button">Información acerca de los custraceos</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="pt-3 mt-4 text-body-secondary border-top">
+
+
+
+    </footer>
+  </div>
+</main>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    
+
+</body>
+
+
+<main class="container">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+      <div class="col-lg-6 px-0">
+        <h1 class="display-4 fst-italic">Hábitat de los Pingüinos</h1>
+        <div class="card" style="width: 20%; letter-spacing: 20%;">
+            <img src="../../../assets/imagenes/230825145656-rba-pinguino-full-169.webp" class="card-img-top" alt="...">
+          </div>
+
+        <p class="lead my-3">Los pingüinos habitan prácticamente en el hemisferio sur del planeta. Según su especie pueden estar distribuidos en diferentes zonas, en su mayoría en las costas del Antártico. El resto podemos ubicarlos en Australia, Nueva Zelanda, Islas Malvinas, la Patagonia Argentina, Perú y Chile.
+
+        </p>
+        <p class="lead mb-0"><a href="#" class="text-body-emphasis fw-bold">Continuar leyendo...</a></p>
+      </div>
+    </div>
+  
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary-emphasis">Háitat</strong>
+            <h3 class="mb-0">Temperaturas ideales</h3>
+            <div class="mb-1 text-body-secondary"></div>
+            <p class="card-text mb-auto">Son animales de sangre caliente, con una temperatura corporal de unos 40 ˚C, y poseen gruesas capas de grasa que repelen el agua y los aíslan del frío. Además, mantienen el calor gracias a una espesa capa de plumas, que conserva el aire caliente, calentado por el propio cuerpo. </p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continuar leyendo
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+          <div class="card" style="width: 10 rem;">
+            <img src="../../../assets/imagenes/230825145656-rba-pinguino-full-169.webp" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis">General</strong>
+            <h3 class="mb-0">Ficha de los pingüinos</h3>
+            <div class="mb-1 text-body-secondary"></div>
+                <p class="mb-auto">Esperanza de vida:  10 a 20 años,
+
+                    actividad física recomendada: Alta,
+                    
+                    carácter: sociales, trabajan en equipo, alegres,
+                    
+                    ideal para: Tomarles fotos de cerca,
+                    
+                    recomendaciones: Respetar su hábitat pues algunas especies están en vía de extinción,
+                    
+                    clima recomendado: Gélido y para algunas especies de tipo templado.</p>
+            <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+              Continuar leyendo
+              <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+            </a>
+          </div>
+          <div class="card" style="width:  10 rem;">
+            <img src="../../../assets/imagenes/pinguino.webp" class="card-img-top" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row g-5">
+      <div class="col-md-8">
+        <h3 class="pb-4 mb-4 fst-italic border-bottom">
+          Todo acerca de los pingüinos
+        </h3>
+  
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">El pingüino y sus curiosidades</h2>
+          <p class="blog-post-meta">Septiembre, 2023 <a href="#">Por Jaded</a></p>
+  
+          <p>Es fácil quedar prendido al ver el gracioso caminar del pingüino. Su balanceo constante hace creer al observador que, en cualquier momento, podría dar de bruces con el suelo. Todo cambia cuando, con un pequeño salto, sustituye la tierra por el agua: en ella son rápidos y ágiles; tanto que incluso parecen otro animal.</p>
+          <hr>
+          <p></p>
+          <h2>18 especies repartidas por el hemisferio sur</h2>
+          <p>This is an example blockquote in action:</p>
+          <blockquote class="blockquote">
+            <p>Quoted text goes here.</p>
+          </blockquote>
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <h3>Example lists</h3>
+          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout. This is an example unordered list:</p>
+          <ul>
+            <li>First list item</li>
+            <li>Second list item with a longer description</li>
+            <li>Third list item to close it out</li>
+          </ul>
+          <p>And this is an ordered list:</p>
+          <ol>
+            <li>First list item</li>
+            <li>Second list item with a longer description</li>
+            <li>Third list item to close it out</li>
+          </ol>
+          <p>And this is a definition list:</p>
+          <dl>
+            <dt>HyperText Markup Language (HTML)</dt>
+            <dd>The language used to describe and define the content of a Web page</dd>
+            <dt>Cascading Style Sheets (CSS)</dt>
+            <dd>Used to describe the appearance of Web content</dd>
+            <dt>JavaScript (JS)</dt>
+            <dd>The programming language used to build advanced Web sites and applications</dd>
+          </dl>
+          <h2>Inline HTML elements</h2>
+          <p>HTML defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
+          <ul>
+            <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">&lt;strong&gt;</code>.</li>
+            <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">&lt;em&gt;</code>.</li>
+            <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should use <code class="language-plaintext highlighter-rouge">&lt;abbr&gt;</code>, with an optional <code class="language-plaintext highlighter-rouge">title</code> attribute for the full phrase.</li>
+            <li>Citations, like <cite>— Mark Otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
+            <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">&lt;del&gt;</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
+            <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+          </ul>
+          <p>Most of these elements are styled by browsers with few modifications on our part.</p>
+          <h2>Heading</h2>
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <h3>Sub-heading</h3>
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <pre><code>Example code block</code></pre>
+          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+        </article>
+  
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">Another blog post</h2>
+          <p class="blog-post-meta">December 23, 2020 by <a href="#">Jacob</a></p>
+  
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <blockquote>
+            <p>Longer quote goes here, maybe with some <strong>emphasized text</strong> in the middle of it.</p>
+          </blockquote>
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <h3>Example table</h3>
+          <p>And don't forget about tables in these posts:</p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Upvotes</th>
+                <th>Downvotes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Alice</td>
+                <td>10</td>
+                <td>11</td>
+              </tr>
+              <tr>
+                <td>Bob</td>
+                <td>4</td>
+                <td>3</td>
+              </tr>
+              <tr>
+                <td>Charlie</td>
+                <td>7</td>
+                <td>9</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td>Totals</td>
+                <td>21</td>
+                <td>23</td>
+              </tr>
+            </tfoot>
+          </table>
+  
+          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+        </article>
+  
+        <article class="blog-post">
+          <h2 class="display-5 link-body-emphasis mb-1">New feature</h2>
+          <p class="blog-post-meta">December 14, 2020 by <a href="#">Chris</a></p>
+  
+          <p>This is some additional paragraph placeholder content. It has been written to fill the available space and show how a longer snippet of text affects the surrounding content. We'll repeat it often to keep the demonstration flowing, so be on the lookout for this exact same string of text.</p>
+          <ul>
+            <li>First list item</li>
+            <li>Second list item with a longer description</li>
+            <li>Third list item to close it out</li>
+          </ul>
+          <p>This is some additional paragraph placeholder content. It's a slightly shorter version of the other highly repetitive body text used throughout.</p>
+        </article>
+  
+        <nav class="blog-pagination" aria-label="Pagination">
+          <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+          <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+        </nav>
+  
+      </div>
+  
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+          <div class="p-4 mb-3 bg-body-tertiary rounded">
+            <h4 class="fst-italic">About</h4>
+            <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+          </div>
+  
+          <div>
+            <h4 class="fst-italic">Recent posts</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Example blog post title</h6>
+                    <small class="text-body-secondary">January 15, 2023</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">This is another blog post title</h6>
+                    <small class="text-body-secondary">January 14, 2023</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                  <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                    <small class="text-body-secondary">January 13, 2023</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="p-4">
+            <h4 class="fst-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li><a href="#">March 2021</a></li>
+              <li><a href="#">February 2021</a></li>
+              <li><a href="#">January 2021</a></li>
+              <li><a href="#">December 2020</a></li>
+              <li><a href="#">November 2020</a></li>
+              <li><a href="#">October 2020</a></li>
+              <li><a href="#">September 2020</a></li>
+              <li><a href="#">August 2020</a></li>
+              <li><a href="#">July 2020</a></li>
+              <li><a href="#">June 2020</a></li>
+              <li><a href="#">May 2020</a></li>
+              <li><a href="#">April 2020</a></li>
+            </ol>
+          </div>
+  
+          <div class="p-4">
+            <h4 class="fst-italic">Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </main>
+  
+
+  
