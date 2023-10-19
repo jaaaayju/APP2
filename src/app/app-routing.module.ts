@@ -6,6 +6,7 @@ import { DatosComponent } from './component/datos/datos.component';
 import { MapaComponent } from './component/mapa/mapa.component';
 
 
+
 const routes: Routes = [
           {path:'Inicio', component:InicioComponent},
           {path:'Galeria', component:GaleriaComponent},

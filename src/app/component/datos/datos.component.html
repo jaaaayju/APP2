@@ -1,1 +1,24 @@
-<p>datos works!</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+      <th scope="col">Detalle</th>
+      
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of PunguinosList">
+
+    <tr>
+      <th scope="row">{{item.ID}}</th>
+      <td>{{item.Name}}</td>
+      <td>{{item.Lat}}</td>
+      <td>{{item.Long}}</td>
+      <td class="btn btn-primary" (click)="Detalle(item.ID)"> Detalle </td> 
+    </tr>
+  
+  </tbody>
+</table>

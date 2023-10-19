@@ -1,0 +1,6 @@
+{"type":"FeatureCollection", "features":[
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-99.0826175,19.4617214,0]},"properties":{"name":"Zoológico San Juan de Aragón"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-99.0053599,19.3944352,0]},"properties":{"name":"Zoológico Parque del Pueblo"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-99.1217271,19.319074,0]},"properties":{"name":"Zoológico Los Coyotes"}},
+{"type":"Feature","geometry":{"type":"Point","coordinates":[-99.1895256,19.4232085,0]},"properties":{"name":"Zoológico de Chapultepec"}}
+]}
